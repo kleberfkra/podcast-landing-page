@@ -159,6 +159,15 @@ h2 {
     box-shadow: 0 4px 15px rgba(29, 185, 84, 0.4);
 }
 
+.youtube-btn {
+    background: #FF0000 !important;
+    color: white !important;
+}
+
+.youtube-btn:hover {
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
+
 .btn-large {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
