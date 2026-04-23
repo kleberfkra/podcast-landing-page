@@ -150,6 +150,15 @@ h2 {
     box-shadow: 0 4px 15px rgba(255, 138, 0, 0.4);
 }
 
+.spotify-btn {
+    background: #1DB954 !important;
+    color: white !important;
+}
+
+.spotify-btn:hover {
+    box-shadow: 0 4px 15px rgba(29, 185, 84, 0.4);
+}
+
 .btn-large {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
