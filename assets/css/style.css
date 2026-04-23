@@ -168,6 +168,15 @@ h2 {
     box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
 }
 
+.linkedin-btn {
+    background: #0A66C2 !important;
+    color: white !important;
+}
+
+.linkedin-btn:hover {
+    box-shadow: 0 4px 15px rgba(10, 102, 194, 0.4);
+}
+
 .btn-large {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
