@@ -189,6 +189,16 @@ h2 {
     border-color: #fe2c55 !important;
 }
 
+.instagram-btn {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.instagram-btn:hover {
+    box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+}
+
 .btn-large {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
