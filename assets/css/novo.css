@@ -137,11 +137,11 @@ h2 .ico { margin-right: 4px; }
 .spotify strong { display: block; }
 .spotify small { font-size: .85rem; opacity: .9; }
 
-/* Vídeos */
+/* Episódios */
 .episodes { display: grid; gap: 12px; }
 .episode { overflow: hidden; transition: border-color .15s; }
-.episode:hover { border-color: var(--accent); }
-.thumb { position: relative; aspect-ratio: 16 / 9; background: #1b1714; }
+.episode:hover { border-color: var(--spotify); }
+.thumb { position: relative; aspect-ratio: 1 / 1; background: #1b1714; }
 .thumb img { width: 100%; height: 100%; object-fit: cover; }
 .thumb::after {
     content: "▶";
@@ -151,12 +151,15 @@ h2 .ico { margin-right: 4px; }
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, .9);
-    color: var(--yt);
+    background: rgba(255, 255, 255, .95);
+    color: var(--spotify);
     display: grid;
     place-items: center;
     padding-left: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+    transition: transform .15s;
 }
+.episode:hover .thumb::after { transform: scale(1.08); }
 .ep-body { padding: 14px 16px 16px; }
 .ep-tag { font-size: .75rem; font-weight: 700; color: var(--accent); letter-spacing: .08em; text-transform: uppercase; }
 .ep-title { font-size: 1rem; font-weight: 600; margin: 4px 0 0; line-height: 1.35; }
