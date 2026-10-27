@@ -1,210 +1,164 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Ponto Batido Podcast | Vida corporativa sem filtros</title>
-    <meta name="description" content="O podcast de quem vive a realidade corporativa depois do expediente. Acompanhe Kleber Rodrigues e Jacques discutindo cultura ágil, Kanban, e desafios do mundo tech sem pose de guru.">
-    <meta name="keywords" content="podcast, ponto batido, mundo corporativo, tecnologia, scrum, kanban, agilidade, carreira tech, desenvolvimento de software, gestao de projetos">
-    <meta name="author" content="Ponto Batido Podcast">
-    <meta name="robots" content="index, follow">
-    
-    <meta property="og:type" content="website">
+    <meta name="description"
+        content="O podcast de quem vive a realidade corporativa depois do expediente. Cultura ágil, Kanban e desafios do mundo tech sem pose de guru.">
+    <meta name="theme-color" content="#f5f2ec" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#161412" media="(prefers-color-scheme: dark)">
+    <meta property="og:title" content="Ponto Batido Podcast">
+    <meta property="og:description" content="Vida corporativa sem filtros.">
     <meta property="og:url" content="https://pontobatido.com.br/">
-    <meta property="og:title" content="Ponto Batido Podcast | Vida corporativa sem filtros">
-    <meta property="og:description" content="O podcast de quem vive a realidade corporativa depois do expediente. Rindo das trapalhadas e encarando desafios.">
-    <meta property="og:image" content="https://pontobatido.com.br/assets/images/kleber.jpeg">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://pontobatido.com.br/">
-    <meta property="twitter:title" content="Ponto Batido Podcast">
-    <meta property="twitter:description" content="Vida corporativa sem filtros. O podcast de quem vive a realidade depois do expediente.">
-
-    <link rel="canonical" href="https://pontobatido.com.br/" />
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "PodcastSeries",
-      "name": "Ponto Batido",
-      "description": "O podcast de quem vive a realidade do depois do expediente. Apresentado por Jacques e Kleber.",
-      "url": "https://pontobatido.com.br/",
-      "author": {
-        "@type": "Person",
-        "name": "Kleber Rodrigues e Jacques"
-      }
-    }
-    </script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://i.ytimg.com">
+    <link rel="stylesheet" href="assets/css/novo.css">
+    <script src="assets/js/novo.js" defer></script>
 </head>
+
 <body>
-    <div class="ambient-glow"></div>
-    <div class="ambient-glow glow-2"></div>
+    <!-- Ícones das redes (SVG inline, sem dependências externas) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-yt" viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></symbol>
+        <symbol id="i-spotify" viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24zm5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.56 18.72 12.84c.36.18.54.78.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3z"/></symbol>
+        <symbol id="i-li" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+        <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03a10.4 10.4 0 0 1-5.82-1.9c-.01 2.92.01 5.84-.02 8.75a7.65 7.65 0 0 1-1.35 3.94 7.46 7.46 0 0 1-5.91 3.21 7.3 7.3 0 0 1-4.08-1.03 7.55 7.55 0 0 1-3.65-5.71c-.02-.5-.03-1-.01-1.49a7.5 7.5 0 0 1 8.73-6.68c.02 1.48-.04 2.96-.04 4.44a3.42 3.42 0 0 0-4.38 2.12c-.21.51-.15 1.07-.14 1.61a3.47 3.47 0 0 0 6.27 1.26c.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+        <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/></symbol>
+    </svg>
 
-    <header class="header">
-        <div class="header-container glass-card">
-            <div class="logo">
-                <i class="fa-solid fa-microphone-lines"></i> Ponto Batido<span>.</span>
-            </div>
-            <nav class="nav">
-                <a href="#about">Quem Somos</a>
-                <a href="#spotify">Spotify</a>
-                <a href="#tiktok">TikTok</a>
-                <a href="#instagram">Instagram</a>
+    <div class="wrap">
+
+        <header class="topbar">
+            <a class="brand" href="#">Ponto <span>Batido.</span></a>
+            <nav class="navlinks" aria-label="Seções">
+                <a href="#about">Quem somos</a>
                 <a href="#episodes">Vídeos</a>
-                <a href="https://open.spotify.com/show/23H1CGhWocjTDJTiOK0Vzv" target="_blank" class="btn-primary nav-btn spotify-btn"><i class="fa-brands fa-spotify"></i> App</a>
-                <a href="https://www.youtube.com/@PontoBatidoPodcast" target="_blank" class="btn-primary nav-btn youtube-btn"><i class="fa-brands fa-youtube"></i> Canal</a>
+                <a href="#spotify">Spotify</a>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content slide-up">
-                <div class="badge"><i class="fa-solid fa-fire"></i> Vida corporativa sem filtros</div>
-                <h1 class="hero-title">A Realidade do <br><span class="highlight">Depois do Expediente</span></h1>
-                <p class="hero-subtitle">Aquele momento em que gestores e profissionais de tech respiram fundo, riem das trapalhadas e encaram os desafios sem pose de guru.</p>
-                <div class="hero-actions" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="#spotify" class="btn-primary btn-large spotify-btn"><i class="fa-brands fa-spotify"></i> Ouvir no Spotify</a>
-                    <a href="#episodes" class="btn-primary btn-large youtube-btn"><i class="fa-brands fa-youtube"></i> Assista no YouTube</a>
+        <main>
+            <section class="hero">
+                <p class="tagline">Vida corporativa sem filtros</p>
+                <h1>A Realidade do Depois do Expediente</h1>
+                <p>Aquele momento em que gestores e profissionais de tech respiram fundo, riem das trapalhadas e
+                    encaram os desafios sem pose de guru.</p>
+                <div class="cta-row">
+                    <a class="btn" href="#spotify"><svg class="ico"><use href="#i-spotify"/></svg>Ouvir no Spotify</a>
+                    <a class="btn outline" href="#episodes"><svg class="ico c-yt"><use href="#i-yt"/></svg>Assista no YouTube</a>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="about" class="about-section slide-up">
-            <div class="about-container glass-card">
-                <h2>Os <span class="highlight">Apresentadores</span></h2>
-                <div class="hosts-grid">
-                    <div class="host">
-                        <div class="host-avatar">
-                            <img src="assets/images/kleber.jpeg" alt="Kleber Rodrigues" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+            <section id="about">
+                <h2>Os Apresentadores</h2>
+                <div class="hosts">
+                    <article class="host">
+                        <img src="assets/images/kleber-168.jpg" width="84" height="84" alt="Kleber Rodrigues" loading="lazy">
+                        <div>
+                            <h3>Kleber Rodrigues</h3>
+                            <div class="role">AI &amp; Agile Guy</div>
+                            <p>Especialista em IA no CoE em Agilidade do Banco do Brasil.</p>
+                            <a href="https://www.linkedin.com/in/kleberfk/" target="_blank" rel="noopener noreferrer"><svg class="ico"><use href="#i-li"/></svg>LinkedIn →</a>
                         </div>
-                        <h3>Kleber Rodrigues</h3>
-                        <p class="host-role">Data & Agile Guy</p>
-                        <p>Já sofreu muito com planilhas e ppts, hoje respira fundo antes de cada reunião para manter a agilidade fluindo.</p>
-                        <a href="https://www.linkedin.com/in/kleberfk/" target="_blank" style="color: #0A66C2; font-size: 1.8rem; margin-top: 1rem; transition: color 0.3s ease;"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                    <div class="host">
-                        <div class="host-avatar">
-                            <img src="assets/images/jacques.jpeg" alt="Jacques Stacciarini" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </article>
+                    <article class="host">
+                        <img src="assets/images/jacques-168.jpg" width="84" height="84" alt="Jacques Stacciarini" loading="lazy">
+                        <div>
+                            <h3>Jacques Stacciarini</h3>
+                            <div class="role">Agilista Transformado</div>
+                            <p>Ex-agilista que virou gestor. Sabe muito bem que depois que a estória de usuário é
+                                fechada, os problemas reais só estão começando.</p>
+                            <a href="https://www.linkedin.com/in/jstacciarini/" target="_blank" rel="noopener noreferrer"><svg class="ico"><use href="#i-li"/></svg>LinkedIn →</a>
                         </div>
-                        <h3>Jacques Stacciarini</h3>
-                        <p class="host-role">Agilista Transformado</p>
-                        <p>Ex-agilista que virou gestor. Sabe muito bem que depois que a estória de usuário é fechada, os problemas reais só estão começando.</p>
-                        <a href="https://www.linkedin.com/in/jstacciarini/" target="_blank" style="color: #0A66C2; font-size: 1.8rem; margin-top: 1rem; transition: color 0.3s ease;"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
+                    </article>
                 </div>
-                <div class="about-footer">
-                    <p>Nascemos da amizade e da experiência real nas trincheiras de tech. Aqui não tem glamour: é improviso, empatia e aprendizado com o humor que só o corporativo proporciona.</p>
-                </div>
-            </div>
-        </section>
+                <p class="story">Nascemos da amizade e da experiência real nas trincheiras de tech. Aqui não tem
+                    glamour: é improviso, empatia e aprendizado com o humor que só o corporativo proporciona.</p>
+            </section>
 
-        <section id="spotify" class="spotify-section slide-up" style="padding-bottom: 2rem;">
-            <h2>Ouça no <span style="color: #1DB954;"><i class="fa-brands fa-spotify"></i> Spotify</span></h2>
-            
-            <div class="spotify-embed" style="width: 100%; max-width: 900px; margin: 0 auto;">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/23H1CGhWocjTDJTiOK0Vzv?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-        </section>
-
-        <section id="tiktok" class="tiktok-section slide-up">
-            <h2>Cortes no <span class="highlight" style="text-shadow: 2px 2px 0px rgba(254, 44, 85, 0.5), -2px -2px 0px rgba(37, 244, 238, 0.5); color: #fff;">TikTok</span></h2>
-            <div style="display: flex; justify-content: center; margin-bottom: 3rem;">
-                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@pontobatidopodcast" data-unique-id="pontobatidopodcast" data-embed-type="creator" style="max-width: 780px; min-width: 288px; border-radius: 12px; overflow: hidden;" > <section> <a target="_blank" href="https://www.tiktok.com/@pontobatidopodcast?refer=creator_embed">@pontobatidopodcast</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-            </div>
-        </section>
-
-        <section id="instagram" class="instagram-section slide-up">
-            <h2>Reels no <span style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900;"><i class="fa-brands fa-instagram"></i> Instagram</span></h2>
-
-            <div class="carousel-container">
-                <!-- Reel 1 -->
-                <div class="carousel-item glass-card">
-                    <iframe src="https://www.instagram.com/p/DYOJujaCr85/embed" width="100%" height="480" frameborder="0" scrolling="no" allowtransparency="true" style="border-radius: 12px; background: white;"></iframe>
-                </div>
-                <!-- Reel 2 -->
-                <div class="carousel-item glass-card">
-                    <iframe src="https://www.instagram.com/p/DYOJtreDBfA/embed" width="100%" height="480" frameborder="0" scrolling="no" allowtransparency="true" style="border-radius: 12px; background: white;"></iframe>
-                </div>
-                <!-- Reel 3 -->
-                <div class="carousel-item glass-card">
-                    <iframe src="https://www.instagram.com/p/DYKIyBLoGNc/embed" width="100%" height="480" frameborder="0" scrolling="no" allowtransparency="true" style="border-radius: 12px; background: white;"></iframe>
-                </div>
-            </div>
-            
-            <div class="more-episodes" style="margin-top: 2rem;">
-                <a href="https://www.instagram.com/pontobatidopod/" target="_blank" class="btn-secondary instagram-btn-secondary">Ver Todos no Instagram <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </section>
-
-        <section id="episodes" class="episodes-section slide-up">
-            <h2>Veja no <span style="color: #FF0000;"><i class="fa-brands fa-youtube"></i> YouTube</span></h2>
-
-            <div class="episodes-grid">
-                <!-- Ep 15 -->
-                <div class="episode-card glass-card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/XfkDqJzAfLI" title="Descobriram que eu não sei o que estou fazendo! 🤫" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <section id="spotify">
+                <h2><svg class="ico c-spotify"><use href="#i-spotify"/></svg>Ouça no Spotify</h2>
+                <a class="spotify" href="https://open.spotify.com/show/23H1CGhWocjTDJTiOK0Vzv" target="_blank" rel="noopener noreferrer">
+                    <svg class="ico"><use href="#i-spotify"/></svg>
+                    <div>
+                        <strong>Ponto Batido Podcast</strong>
+                        <small>Ouça todos os episódios</small>
                     </div>
-                    <div class="episode-info">
-                        <span class="ep-number">EPISÓDIO 15</span>
-                        <h3>Descobriram que eu não sei o que estou fazendo! 🤫</h3>
-                    </div>
-                </div>
-                <!-- Ep 14 -->
-                <div class="episode-card glass-card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/M_oVUCgcCiY" title="Liderança em Transição" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="episode-info">
-                        <span class="ep-number">EPISÓDIO 14</span>
-                        <h3>Liderança em Transição</h3>
-                    </div>
-                </div>
-                <!-- Ep 13 -->
-                <div class="episode-card glass-card">
-                    <div class="video-wrapper">
-                        <iframe src="https://www.youtube.com/embed/lC5QoqsBwk0" title="A Geração Z Nunca Vai Entender Isso 😅 | Ponto Batido #13" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="episode-info">
-                        <span class="ep-number">EPISÓDIO 13</span>
-                        <h3>A Geração Z Nunca Vai Entender Isso 😅</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="more-episodes">
-                <a href="https://www.youtube.com/@PontoBatidoPodcast/videos" target="_blank" class="btn-secondary">Ver Todos no YouTube <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </section>
-    </main>
-
-    <footer id="subscribe" class="footer">
-        <div class="footer-content glass-card slide-up">
-            <h2>Pronto para bater o ponto?</h2>
-            <p>Acompanhe nossos conteúdos e não perca os perrengues corporativos da próxima semana.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="https://www.youtube.com/@PontoBatidoPodcast?sub_confirmation=1" target="_blank" class="btn-primary subscribe-btn youtube-btn">
-                    <i class="fa-brands fa-youtube"></i> Inscrever-se no Ponto Batido
+                    <span aria-hidden="true">▶</span>
                 </a>
-                <a href="https://www.linkedin.com/company/pontobatido/" target="_blank" class="btn-primary subscribe-btn linkedin-btn">
-                    <i class="fa-brands fa-linkedin"></i> Seguir no LinkedIn
-                </a>
-                <a href="https://www.tiktok.com/@pontobatidopodcast" target="_blank" class="btn-primary subscribe-btn tiktok-btn">
-                    <i class="fa-brands fa-tiktok"></i> Seguir no TikTok
-                </a>
-                <a href="https://www.instagram.com/pontobatidopod/" target="_blank" class="btn-primary subscribe-btn instagram-btn">
-                    <i class="fa-brands fa-instagram"></i> Seguir no Instagram
-                </a>
-            </div>
-        </div>
-        <p class="copyright">&copy; 2026 Ponto Batido Podcast. Feito para os sobreviventes do escritório.</p>
-    </footer>
+            </section>
 
-    <script src="assets/js/script.js"></script>
+            <section id="episodes">
+                <h2><svg class="ico c-yt"><use href="#i-yt"/></svg>Veja no YouTube</h2>
+                <!-- Atualizado via videos.json; os cards abaixo são o fallback -->
+                <div class="episodes" data-videos="3">
+                    <a class="episode" href="https://www.youtube.com/watch?v=_9HNs3QkWGM" target="_blank" rel="noopener noreferrer">
+                        <div class="thumb"><img src="https://i.ytimg.com/vi/_9HNs3QkWGM/hqdefault.jpg" width="480" height="270" alt="Comentando Notícias!!!" loading="lazy"></div>
+                        <div class="ep-body">
+                            <div class="ep-tag">15 de out. de 2026</div>
+                            <p class="ep-title">Comentando Notícias!!!</p>
+                        </div>
+                    </a>
+                    <a class="episode" href="https://www.youtube.com/watch?v=MB3gEW9Gotc" target="_blank" rel="noopener noreferrer">
+                        <div class="thumb"><img src="https://i.ytimg.com/vi/MB3gEW9Gotc/hqdefault.jpg" width="480" height="270" alt="Welcome to our live show!" loading="lazy"></div>
+                        <div class="ep-body">
+                            <div class="ep-tag">09 de out. de 2026</div>
+                            <p class="ep-title">Welcome to our live show!</p>
+                        </div>
+                    </a>
+                    <a class="episode" href="https://www.youtube.com/watch?v=6Z2uXccZJLU" target="_blank" rel="noopener noreferrer">
+                        <div class="thumb"><img src="https://i.ytimg.com/vi/6Z2uXccZJLU/hqdefault.jpg" width="480" height="270" alt="Favor não oferecer soluções: Eu só quero reclamar!" loading="lazy"></div>
+                        <div class="ep-body">
+                            <div class="ep-tag">25 de set. de 2026</div>
+                            <p class="ep-title">Favor não oferecer soluções: Eu só quero reclamar!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="ep-more">
+                    <a class="btn outline" href="https://www.youtube.com/@PontoBatidoPodcast/videos" target="_blank" rel="noopener noreferrer"><svg class="ico c-yt"><use href="#i-yt"/></svg>Ver todos no YouTube</a>
+                </div>
+            </section>
+
+            <section>
+                <h2>Cortes e bastidores</h2>
+                <div class="social-cards">
+                    <a class="card" href="https://www.tiktok.com/@pontobatidopodcast" target="_blank" rel="noopener noreferrer">
+                        <svg class="ico"><use href="#i-tiktok"/></svg>
+                        <strong>TikTok</strong>
+                        <small>Cortes do podcast</small>
+                    </a>
+                    <a class="card" href="https://www.instagram.com/pontobatidopod/" target="_blank" rel="noopener noreferrer">
+                        <svg class="ico ico-ig c-ig"><use href="#i-ig"/></svg>
+                        <strong>Instagram</strong>
+                        <small>Reels e posts</small>
+                    </a>
+                    <a class="card wide" href="https://www.youtube.com/@PontoBatidoPodcast" target="_blank" rel="noopener noreferrer">
+                        <svg class="ico c-yt"><use href="#i-yt"/></svg>
+                        <strong>Canal no YouTube</strong>
+                        <small>Episódios completos e lives</small>
+                    </a>
+                </div>
+            </section>
+
+            <section>
+                <div class="final">
+                    <h2>Pronto para bater o ponto?</h2>
+                    <p>Acompanhe nossos conteúdos e não perca os perrengues corporativos da próxima semana.</p>
+                    <div class="btns">
+                        <a class="btn block" href="https://www.youtube.com/@PontoBatidoPodcast?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><svg class="ico"><use href="#i-yt"/></svg>Inscrever-se no Ponto Batido</a>
+                        <a class="btn outline block" href="https://www.linkedin.com/company/pontobatido/" target="_blank" rel="noopener noreferrer"><svg class="ico c-li"><use href="#i-li"/></svg>Seguir no LinkedIn</a>
+                        <a class="btn outline block" href="https://www.tiktok.com/@pontobatidopodcast" target="_blank" rel="noopener noreferrer"><svg class="ico"><use href="#i-tiktok"/></svg>Seguir no TikTok</a>
+                        <a class="btn outline block" href="https://www.instagram.com/pontobatidopod/" target="_blank" rel="noopener noreferrer"><svg class="ico ico-ig c-ig"><use href="#i-ig"/></svg>Seguir no Instagram</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>© 2026 Ponto Batido Podcast. Feito para os sobreviventes do escritório.</footer>
+
+    </div>
 </body>
+
 </html>

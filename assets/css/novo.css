@@ -1,0 +1,192 @@
+/* Ponto Batido — layout novo (protótipo) */
+:root {
+    --bg: #f5f2ec;
+    --surface: #fff;
+    --text: #1f1d1a;
+    --muted: #6d6760;
+    --accent: #c4572e;
+    --accent-2: #2f6f5e;
+    --border: #e3ddd3;
+    --radius: 14px;
+    --yt: #ff0000;
+    --spotify: #1db954;
+    --ig: #e1306c;
+    --li: #0a66c2;
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #161412;
+        --surface: #201e1b;
+        --text: #f3efe8;
+        --muted: #a8a095;
+        --accent: #ef7a4f;
+        --accent-2: #5fb89f;
+        --border: #2e2b27;
+    }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.wrap { max-width: 560px; margin: 0 auto; padding: 0 18px 48px; }
+
+/* Ícones */
+.ico { width: 1.15em; height: 1.15em; fill: currentColor; flex: none; vertical-align: -.2em; }
+.ico-ig { fill: none; stroke: currentColor; stroke-width: 2; }
+.c-yt { color: var(--yt); }
+.c-spotify { color: var(--spotify); }
+.c-ig { color: var(--ig); }
+.c-li { color: var(--li); }
+
+/* Barra superior */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -18px;
+    padding: 14px 18px;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand { font-weight: 800; letter-spacing: -.02em; font-size: 1.05rem; }
+.brand span { color: var(--accent); }
+.navlinks { display: flex; gap: 14px; font-size: .85rem; }
+.navlinks a { color: var(--muted); }
+.navlinks a:hover { color: var(--accent); }
+
+/* Hero */
+.hero { text-align: center; padding: 40px 0 8px; }
+.tagline { color: var(--muted); font-size: .9rem; margin: 0 0 10px; text-transform: uppercase; letter-spacing: .08em; }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 14px; letter-spacing: -.02em; }
+.hero > p:not(.tagline) { color: var(--muted); max-width: 440px; margin: 0 auto; }
+.cta-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 22px; }
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 13px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: .95rem;
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid transparent;
+    transition: transform .15s, border-color .15s, color .15s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn.outline { background: var(--surface); color: var(--text); border-color: var(--border); }
+.btn.outline:hover { border-color: var(--accent); color: var(--accent); }
+.btn.block { display: flex; width: 100%; }
+
+section { margin-top: 44px; scroll-margin-top: 70px; }
+h2 { font-size: 1.25rem; margin: 0 0 16px; text-align: center; letter-spacing: -.01em; }
+h2 .ico { margin-right: 4px; }
+
+/* Cartão base */
+.host, .episode, .card, .final {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+/* Apresentadores */
+.hosts { display: grid; gap: 14px; }
+.host { padding: 20px; display: flex; gap: 16px; align-items: flex-start; }
+.host img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; flex: none; }
+.host h3 { margin: 0; font-size: 1.05rem; }
+.role { color: var(--accent); font-size: .85rem; font-weight: 600; margin: 2px 0 8px; }
+.host p { margin: 0; font-size: .9rem; color: var(--muted); }
+.host a { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-size: .8rem; color: var(--accent-2); }
+.story { text-align: center; color: var(--muted); font-size: .95rem; margin: 22px auto 0; max-width: 480px; }
+
+/* Spotify */
+.spotify {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px;
+    border-radius: var(--radius);
+    background: var(--spotify);
+    color: #fff;
+}
+.spotify .ico { width: 2.2rem; height: 2.2rem; }
+.spotify div { flex: 1; }
+.spotify strong { display: block; }
+.spotify small { font-size: .85rem; opacity: .9; }
+
+/* Vídeos */
+.episodes { display: grid; gap: 12px; }
+.episode { overflow: hidden; transition: border-color .15s; }
+.episode:hover { border-color: var(--accent); }
+.thumb { position: relative; aspect-ratio: 16 / 9; background: #1b1714; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.thumb::after {
+    content: "▶";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .9);
+    color: var(--yt);
+    display: grid;
+    place-items: center;
+    padding-left: 4px;
+}
+.ep-body { padding: 14px 16px 16px; }
+.ep-tag { font-size: .75rem; font-weight: 700; color: var(--accent); letter-spacing: .08em; text-transform: uppercase; }
+.ep-title { font-size: 1rem; font-weight: 600; margin: 4px 0 0; line-height: 1.35; }
+.ep-more { text-align: center; margin-top: 16px; }
+
+/* Redes */
+.social-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.card { padding: 18px; transition: border-color .15s; }
+.card:hover { border-color: var(--accent); }
+.card .ico { width: 1.6rem; height: 1.6rem; display: block; margin-bottom: 8px; }
+.card strong { display: block; font-size: .98rem; }
+.card small { color: var(--muted); font-size: .8rem; }
+.card.wide { grid-column: 1 / -1; }
+
+/* CTA final */
+.final { border-radius: 18px; padding: 28px 22px; text-align: center; }
+.final h2 { margin-bottom: 8px; }
+.final p { color: var(--muted); margin: 0 0 18px; }
+.final .btns { display: grid; gap: 10px; }
+
+footer {
+    margin-top: 48px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: .85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+}
